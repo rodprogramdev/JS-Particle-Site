@@ -44,10 +44,17 @@ class Particle {
 
 function init(){
     for (let i = 0; i < numberOfParticles; i++){
+        const particlePositionX = Math.random() * canvas.width;
+        const particlePositionY = Math.random()* canvas.height;
         
-        particlesArray.push(new Particle(100, 100));
+        particlesArray.push(new Particle(particlePositionX, particlePositionY));
     }
+
+    console.log(particlesArray); // check to run particles function
+
 }
+
+init();
 /*
 const particle1 = new Particle (10,0);
 const particle2 = new Particle (100,100);*/
@@ -57,11 +64,13 @@ const particle2 = new Particle (100,100);*/
 function animate(){
     canvasContext.fillStyle = 'rgba(255,255,255,0.01)';
     canvasContext.fillRect(0,0,canvas.width,canvas.height);
-
+/*
     particle1.update();
     particle1.draw();
     particle2.update();
-    particle2.draw();
+    particle2.draw();*/
+
+    
     requestAnimationFrame(animate); // callling the custom function or parent function that will create a programming loop or programming concept called recursion.
 }// custom function
 
