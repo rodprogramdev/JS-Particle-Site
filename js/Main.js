@@ -28,7 +28,7 @@ class Particle {
         this.y = y;
         this.size = Math.random() * 15 + 1; //change the size to a random number
         this.weight = Math.random() * 2 + 1; // represents gravity
-        this.directionX = -2; // will simulate a wind. - value gets wind move the left + value moves wind to the right 
+        this.directionX = Math.random() * (-2 + 2); // will simulate a wind. - value gets wind move the left + value moves wind to the right 
     }
     
     update(){
@@ -50,7 +50,7 @@ class Particle {
             this.y + this.size > title.y
         ){
             this.y -= 3;
-            this.weight *= -0.5;
+            this.weight *= -0.7;
         }
         
     }
@@ -114,5 +114,12 @@ animate();
 window.addEventListener('resize', function(){
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-
+    titleMeasurements = titleElement.getBoundingClientRect();// resize the position of title element relative to browser window
+    title = { // we are not creating a new variable and just updating them
+        x:titleMeasurements.left,
+        y: titleMeasurements.top,
+        width: titleMeasurements.width, 
+        height: 10
+    }
+    init();
 })
