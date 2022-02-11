@@ -50,6 +50,7 @@ class Particle {
             this.y + this.size > title.y
         ){
             this.y -= 3;
+            this.weight *= -0.5;
         }
         
     }
