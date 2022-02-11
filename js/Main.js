@@ -8,11 +8,13 @@ canvas.height = window.innerHeight;
 
 let particlesArray = [];
 
+const numberOfParticles = 500;
+
 class Particle {
     constructor(x,y){
         this.x = x;
         this.y = y;
-        this.size = 10; 
+        this.size = 5; 
         this.weight = 2; // represents gravity
         this.directionX = -1; // will simulate a wind. - value gets wind move the left + value moves wind to the right 
     }
@@ -40,8 +42,15 @@ class Particle {
 
 }
 
+function init(){
+    for (let i = 0; i < numberOfParticles; i++){
+        
+        particlesArray.push(new Particle(100, 100));
+    }
+}
+/*
 const particle1 = new Particle (10,0);
-const particle2 = new Particle (100,100);
+const particle2 = new Particle (100,100);*/
 
 
 
