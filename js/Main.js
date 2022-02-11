@@ -21,6 +21,7 @@ class Particle {
         if(this.y > canvas.height){
             this.y = 0 - this.size;
             this.weight =2; // this will reset the weight and solve issue with falling too fast.
+            this.x= Math.random() * canvas.width; // randomize the position of the particle on the screen 
         }
         this.weight += 0.01;
         this.y += this.weight;
