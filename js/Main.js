@@ -14,7 +14,7 @@ class Particle {
     constructor(x,y){
         this.x = x;
         this.y = y;
-        this.size = 5; 
+        this.size = Math.random() * 15 + 1; //change the size to a random number
         this.weight = 2; // represents gravity
         this.directionX = -1; // will simulate a wind. - value gets wind move the left + value moves wind to the right 
     }
