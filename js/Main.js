@@ -13,8 +13,8 @@ class Particle {
         this.x = x;
         this.y = y;
         this.size = 10; 
-        this.weight = 2;
-        this.directionX = 1;
+        this.weight = 2; // represents gravity
+        this.directionX = -1; // will simulate a wind. - value gets wind move the left + value moves wind to the right 
     }
     
     update(){
@@ -25,6 +25,7 @@ class Particle {
         }
         this.weight += 0.01;
         this.y += this.weight;
+        this.x += this.directionX; // for every frame add particles effect of wind to get the particle gets push to the left
     }
 
     draw(){
