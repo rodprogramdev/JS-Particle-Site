@@ -32,9 +32,12 @@ class Particle {
 
 }
 
-const particle1 = new Particle (100,10);
+const particle1 = new Particle (10,0);
 
 function animate(){
+    canvasContext.fillStyle = 'rgba(255,255,255,0.01)';
+    canvasContext.fillRect(0,0,canvas.width,canvas.height);
+
     particle1.update();
     particle1.draw();
     requestAnimationFrame(animate); // callling the custom function or parent function that will create a programming loop or programming concept called recursion.
