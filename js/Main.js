@@ -10,6 +10,11 @@ let particlesArray = [];
 
 const numberOfParticles = 100;
 
+//title element collision
+let titleElement = document.getElementById('title1');
+titleMeasurements = titleElement.getBoundingClientRect();//contains an object that contains the size of an element and its position relative to the browser window.
+//console.log(titleMeasurements); //check values.
+
 class Particle {
     constructor(x,y){
         this.x = x;
