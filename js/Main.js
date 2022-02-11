@@ -23,10 +23,10 @@ class Particle {
     }
 
     draw(){
-        canvasContext.fillStyle = 'red';
-        canvasContext.beginPatch();
+        canvasContext.fillStyle = 'blue';
+        canvasContext.beginPath();
         canvasContext.arc(this.x, this.y, this.size, 0, Math.PI * 2); // value in radiance that converts into 360 degrees. Full circle.
-        canvasContext.closePathc();
+        canvasContext.closePath();
         canvasContext.fill();
     }
 
@@ -39,3 +39,5 @@ function animate(){
     particle1.draw();
     requestAnimationFrame(animate); // callling the custom function or parent function that will create a programming loop or programming concept called recursion.
 }// custom function
+
+animate();
