@@ -18,6 +18,9 @@ class Particle {
     }
     
     update(){
+        if(this.y > canvas.height){
+            this.y = 0 - this.size;
+        }
         this.weight += 0.01;
         this.y += this.weight;
     }
