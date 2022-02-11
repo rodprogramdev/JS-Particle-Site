@@ -41,7 +41,20 @@ class Particle {
         this.weight += 0.01;
         this.y += this.weight;
         this.x += this.directionX; // for every frame add particles effect of wind to get the particle gets push to the left
+        
+        //check for collision between particles and h1 element title
+        if(
+            this.x < title.x + title.width && 
+            this.x + this.size > title.x && 
+            this.y < title.y + title.height &&
+            this.y + this.size > title.y
+        ){
+            this.y -= 3;
+        }
+        
     }
+
+
 
     draw(){
         canvasContext.fillStyle = 'blue';
@@ -86,7 +99,7 @@ function animate(){
         particlesArray[i].draw();//call draw method.
     }
     
-    canvasContext.fillRect(title.x,title.y,title.width,title.height);
+    //canvasContext.fillRect(title.x,title.y,title.width,title.height);
     requestAnimationFrame(animate); // callling the custom function or parent function that will create a programming loop or programming concept called recursion.
 }// custom function
 
