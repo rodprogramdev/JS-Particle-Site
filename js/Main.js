@@ -15,6 +15,13 @@ let titleElement = document.getElementById('title1');
 titleMeasurements = titleElement.getBoundingClientRect();//contains an object that contains the size of an element and its position relative to the browser window.
 //console.log(titleMeasurements); //check values.
 
+let title = {
+    x:titleMeasurements.left,
+    y: titleMeasurements.top,
+    width: titleMeasurements.width, 
+    height: titleMeasurements.height
+}// get all properties from the title element- converted html elements bounding blocks to javascript object.
+
 class Particle {
     constructor(x,y){
         this.x = x;
