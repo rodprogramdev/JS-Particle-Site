@@ -86,6 +86,7 @@ function animate(){
         particlesArray[i].draw();//call draw method.
     }
     
+    canvasContext.fillRect(title.x,title.y,title.width,title.height);
     requestAnimationFrame(animate); // callling the custom function or parent function that will create a programming loop or programming concept called recursion.
 }// custom function
 
