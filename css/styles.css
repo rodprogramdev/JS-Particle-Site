@@ -6,7 +6,7 @@
 
 #canvas1{
     position: absolute;
-    background: blue;
+    background-color:yellow;
     top:0;
     left: 0;
     width: 100%;
@@ -21,6 +21,8 @@
     font-size: 120px;
     line-height: 110px;
     white-space: nowrap;
+    border: 10px solid black;
+    border-top: 5px solid black;
     
 
 }
