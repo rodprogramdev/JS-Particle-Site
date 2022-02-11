@@ -15,15 +15,15 @@ class Particle {
         this.x = x;
         this.y = y;
         this.size = Math.random() * 15 + 1; //change the size to a random number
-        this.weight = 2; // represents gravity
-        this.directionX = -1; // will simulate a wind. - value gets wind move the left + value moves wind to the right 
+        this.weight = Math.random() * 2 + 1; // represents gravity
+        this.directionX = -2; // will simulate a wind. - value gets wind move the left + value moves wind to the right 
     }
     
     update(){
         
         if(this.y > canvas.height){
             this.y = 0 - this.size;
-            this.weight =2; // this will reset the weight and solve issue with falling too fast.
+            this.weight = Math.random() * 2 + 1; // this will reset the weight and solve issue with falling too fast.
             this.x= Math.random() * canvas.width * 1.5; // randomize the position of the particle on the screen add canvas.width * 1.2 to reset the position to the right bottom corner. 
         }   
         this.weight += 0.01;
