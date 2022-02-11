@@ -18,6 +18,7 @@ class Particle {
     }
     
     update(){
+        
         if(this.y > canvas.height){
             this.y = 0 - this.size;
             this.weight =2; // this will reset the weight and solve issue with falling too fast.
@@ -34,11 +35,15 @@ class Particle {
         canvasContext.arc(this.x, this.y, this.size, 0, Math.PI * 2); // value in radiance that converts into 360 degrees. Full circle.
         canvasContext.closePath();
         canvasContext.fill();
+        
     }
 
 }
 
 const particle1 = new Particle (10,0);
+const particle2 = new Particle (100,100);
+
+
 
 function animate(){
     canvasContext.fillStyle = 'rgba(255,255,255,0.01)';
@@ -46,6 +51,8 @@ function animate(){
 
     particle1.update();
     particle1.draw();
+    particle2.update();
+    particle2.draw();
     requestAnimationFrame(animate); // callling the custom function or parent function that will create a programming loop or programming concept called recursion.
 }// custom function
 
