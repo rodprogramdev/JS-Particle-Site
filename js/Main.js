@@ -69,6 +69,7 @@ class Particle {
 }
 
 function init(){
+    particlesArray = [];// makes sure that the array is empty before the init function runs
     for (let i = 0; i < numberOfParticles; i++){
         const particlePositionX = Math.random() * canvas.width;
         const particlePositionY = Math.random()* canvas.height;
@@ -105,3 +106,13 @@ function animate(){
 }// custom function
 
 animate();
+
+// watch an event and create callback function whenever a particular event happens. 
+
+// listen to a window resize event.
+
+window.addEventListener('resize', function(){
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+})
