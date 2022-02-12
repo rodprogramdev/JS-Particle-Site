@@ -41,6 +41,7 @@
 #title1:hover{
     animation: mymove 0.5s ease-in;
     background-image: linear-gradient(red, yellow, blue);
+    cursor: pointer;
 }
 @keyframes mymove {
     0%{top: 50%}
